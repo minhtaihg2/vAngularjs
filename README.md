@@ -62,7 +62,7 @@ angular.module('yourApp', [
 ##Cấu hình roles :
  
  
-###Xây dựng danh sách tất các các Roles bạn sử dụng trong App :
+####Xây dựng danh sách tất các các Roles bạn sử dụng trong App :
  
   ```javascript
  roles: [
@@ -72,7 +72,7 @@ angular.module('yourApp', [
   ```
  
  
-### Thiết lập tất cả các quyền truy cập mà bạn định ngĩa theo từng cấp độ sử dụng
+#### Thiết lập tất cả các quyền truy cập mà bạn định ngĩa theo từng cấp độ sử dụng
  
   ```javascript
  accessLevels: {
@@ -81,7 +81,7 @@ angular.module('yourApp', [
  }
   ```
   
-###Export roles
+####Export roles
   
   ```javascript
  exports.userCan =
@@ -93,7 +93,7 @@ angular.module('yourApp', [
 ```
  accessLevel: window.userCan.accessUser
 ```
-####Example
+#####Example
  ```javascript
  .state('main.home', {
                 url: "",
