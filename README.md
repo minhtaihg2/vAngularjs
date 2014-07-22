@@ -105,10 +105,13 @@ angular.module('yourApp', [
  
 ### Using Service
 
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+Param         |        values | description
+------------- | ------------- | ----------
+String  | TableName     | Tên bảng dữ liệu cần lấy
+number  | Start         | Start Lấy phần tử từ vị trí || để null mặc định 0
+number  | Limit         | tối đa phần tử được lấy || để null mặc định 1000
+Array   | Filters       | Lọc theo điều kiện || null
+Array   | Sorters       | Sắp xếp || null
 
 
 * @param {String} TableName tên bảng cần lấy dữ liệu
