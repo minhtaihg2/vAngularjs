@@ -6,7 +6,7 @@ framework for AngularJS Client VSOFT
 
 ==========
 
-##Get Started
+#Get Started
 
 
 
@@ -25,7 +25,7 @@ framework for AngularJS Client VSOFT
 
 ==========
 
-```
+```html
 <script src="bower_components/angular-collection/angular-collection.min.js"></script>
 
 <script src="scripts/Config.js"></script>
