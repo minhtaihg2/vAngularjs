@@ -32,10 +32,16 @@ framework for AngularJS Client VSOFT
 <script src="scripts/vsoft.js"></script>
 ```
 
+```javascript
+angular.module('yourApp', [
+    'vFramework'  
+])
+```
+
 #Using vFramework
 
- ```
- 
+
+ ```html
  deviceID : {String}  mã ID của thiết bị //
  defaultPass : {String}  pass của thiết bị || null
  apiHost : {String}  địa chỉ hosting // apiHost : 'http://itaxi.vn'
@@ -52,11 +58,11 @@ framework for AngularJS Client VSOFT
  
   ```
   ==========
-  
- #Cấu hình roles :
+
+#Cấu hình roles :
  
  
- ###Xây dựng danh sách tất các các Roles bạn sử dụng trong App :
+###Xây dựng danh sách tất các các Roles bạn sử dụng trong App :
  
   ```html
  roles: [
@@ -76,7 +82,7 @@ framework for AngularJS Client VSOFT
  }
   ```
   
-  ###Export roles
+###Export roles
   
   ```
  exports.userCan =
@@ -88,7 +94,7 @@ framework for AngularJS Client VSOFT
 ```
  accessLevel: window.userCan.accessUser
 ```
- Example
+####Example
  ```html
  .state('main.home', {
                 url: "",
