@@ -104,14 +104,14 @@ angular.module('yourApp', [
  ```
  
 ### Using Service
-```javascript
-         *@param {String} //TableName tên bảng cần lấy dữ liệu
-         *@param {number} //Start Lấy phần tử từ vị trí || để null mặc định 0
-         *@param {number} //Limit tối đa phần tử được lấy || để null mặc định 1000
-         *@param {Array}  //Filters Lọc theo điều kiện || null
-         *@param {Array}  //Sorters Sắp xếp || null
+
+*@param {String} //TableName tên bảng cần lấy dữ liệu
+*@param {number} //Start Lấy phần tử từ vị trí || để null mặc định 0
+*@param {number} //Limit tối đa phần tử được lấy || để null mặc định 1000
+*@param {Array}  //Filters Lọc theo điều kiện || null
+*@param {Array}  //Sorters Sắp xếp || null
          
-```
+
 #####example
          
 ```javascript
@@ -156,9 +156,9 @@ angular.module('yourApp', [
 
 #####Lấy dữ liệu từ service
          
-         *@param {String} TableName tên bảng cần lấy dữ liệu
-         *@param {String} Id của đối tượng cần lấy
-         *@param {String} NameStogare dataStorage truyền vào || null (để null sẽ lấy từ server)
+*@param {String} TableName tên bảng cần lấy dữ liệu
+*@param {String} Id của đối tượng cần lấy
+*@param {String} NameStogare dataStorage truyền vào || null (để null sẽ lấy từ server)
          
          
          ```javascript
