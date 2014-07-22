@@ -64,18 +64,17 @@ angular.module('yourApp', [
  
 ###Xây dựng danh sách tất các các Roles bạn sử dụng trong App :
  
-  ```html
+  ```javascript
  roles: [
- 'anon',
- 'user'
+     'anon',
+     'user'
  ]
- 
   ```
  
  
 ### Thiết lập tất cả các quyền truy cập mà bạn định ngĩa theo từng cấp độ sử dụng
  
-  ```html
+  ```javascript
  accessLevels: {
       'anon': ['anon'],
       'user': ['user']
@@ -84,7 +83,7 @@ angular.module('yourApp', [
   
 ###Export roles
   
-  ```
+  ```javascript
  exports.userCan =
  {
      accessUser: exports.accessLevels.user // Export 1 roles 'user'
@@ -95,7 +94,7 @@ angular.module('yourApp', [
  accessLevel: window.userCan.accessUser
 ```
 ####Example
- ```html
+ ```javascript
  .state('main.home', {
                 url: "",
                 templateUrl: 'views/states/home.html',
