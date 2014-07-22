@@ -166,14 +166,14 @@ TableName   |  String   | Tên bảng cần lấy dữ liệu
 Id  |      String    | Id của đối tượng cần lấy
  NameStorage |       String   | NameStorage dataStorage truyền vào || null (để null sẽ lấy từ server)
 
-
+#####Example
          
-         ```javascript
+```javascript
          $fetchData.getDataId('UserAuths', '5397ca5dc0c8174642000001').then(function(resp){
                 console.log('data : ',resp);
                 },function(err){
                 console.log('err :',err);
          });
-         ```
+```
          
 
