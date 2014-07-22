@@ -16,7 +16,9 @@ Get Started
 * via Bower: by running $ bower install angular-collection console
 
 (2) Include vsoft.js (or vsoft.min.js) in your index.html, after including Angular itself (For Component users: ignore this step)
+
 (3) Include Config.js in your index.html
+
 (4) Add 'vFramework' to your main module's list of dependencies 
 
 When you're done, your setup should look similar to the following:
@@ -29,9 +31,3 @@ When you're done, your setup should look similar to the following:
 <script src="scripts/Config.js"></script>
 <script src="scripts/vsoft.js"></script>
 ```
-
-==========
-
-
-
-==========
