@@ -104,14 +104,15 @@ angular.module('yourApp', [
  ```
  
 ### Using Service
-
+```javascript
          *@param {String} TableName tên bảng cần lấy dữ liệu
          *@param {number} Start Lấy phần tử từ vị trí || để null mặc định 0
          *@param {number} Limit tối đa phần tử được lấy || để null mặc định 1000
          *@param {Array}  Filters Lọc theo điều kiện || null
          *@param {Array}  Sorters Sắp xếp || null
          
-         example
+         ```
+         #####example
          
           ```
           var sorters = [{property: 'startAt', direction: 'DESC'}];`
@@ -150,8 +151,6 @@ angular.module('yourApp', [
             })
          ```
          
-
-
 
 #####Lấy dữ liệu từ service
          
