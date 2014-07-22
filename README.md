@@ -110,7 +110,9 @@ angular.module('yourApp', [
          *@param {number} Limit tối đa phần tử được lấy || để null mặc định 1000
          *@param {Array}  Filters Lọc theo điều kiện || null
          *@param {Array}  Sorters Sắp xếp || null
-         @example
+         
+         example
+         
           ```
           var sorters = [{property: 'startAt', direction: 'DESC'}];`
           ```
@@ -156,8 +158,9 @@ angular.module('yourApp', [
          *@param {String} TableName tên bảng cần lấy dữ liệu
          *@param {String} Id của đối tượng cần lấy
          *@param {String} NameStogare dataStorage truyền vào || null (để null sẽ lấy từ server)
-         @example
-         ```
+         
+         
+         ```javascript
          $fetchData.getDataId('UserAuths', '5397ca5dc0c8174642000001').then(function(resp){
                 console.log('data : ',resp);
                 },function(err){
