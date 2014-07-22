@@ -41,7 +41,7 @@ angular.module('yourApp', [
 ##Using vFramework
 
 
- ```html
+ ```javascript
  deviceID : {String}  mã ID của thiết bị //
  defaultPass : {String}  pass của thiết bị || null
  apiHost : {String}  địa chỉ hosting // apiHost : 'http://itaxi.vn'
