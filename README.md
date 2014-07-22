@@ -160,11 +160,11 @@ angular.module('yourApp', [
 
 #####Lấy dữ liệu từ service
          
-*@param {String} TableName tên bảng cần lấy dữ liệu
+* @param {String} TableName tên bảng cần lấy dữ liệu
 
-*@param {String} Id của đối tượng cần lấy
+* @param {String} Id của đối tượng cần lấy
 
-*@param {String} NameStogare dataStorage truyền vào || null (để null sẽ lấy từ server)
+* @param {String} NameStogare dataStorage truyền vào || null (để null sẽ lấy từ server)
          
          
          ```javascript
