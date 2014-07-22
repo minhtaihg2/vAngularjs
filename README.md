@@ -105,15 +105,15 @@ angular.module('yourApp', [
  
 ### Using Service
 
-*@param {String} //TableName tên bảng cần lấy dữ liệu
+* @param {String} TableName tên bảng cần lấy dữ liệu
 
-*@param {number} //Start Lấy phần tử từ vị trí || để null mặc định 0
+* @param {number} Start Lấy phần tử từ vị trí || để null mặc định 0
 
-*@param {number} //Limit tối đa phần tử được lấy || để null mặc định 1000
+* @param {number} Limit tối đa phần tử được lấy || để null mặc định 1000
 
-*@param {Array}  //Filters Lọc theo điều kiện || null
+* @param {Array}  Filters Lọc theo điều kiện || null
 
-*@param {Array}  //Sorters Sắp xếp || null
+* @param {Array}  Sorters Sắp xếp || null
          
 
 #####example
