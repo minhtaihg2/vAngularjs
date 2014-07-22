@@ -42,10 +42,10 @@ angular.module('yourApp', [
 
 
  ```javascript
- deviceID : {String}  mã ID của thiết bị //
- defaultPass : {String}  pass của thiết bị || null
- apiHost : {String}  địa chỉ hosting // apiHost : 'http://itaxi.vn'
- mediaHost : {String}  địa chỉ media hosting
+ deviceID : {String} // mã ID của thiết bị 
+ defaultPass : {String}  //pass của thiết bị || null
+ apiHost : {String}  //địa chỉ hosting // apiHost : 'http://itaxi.vn'
+ mediaHost : {String} // địa chỉ media hosting
  disableLog: {
             info: true, // true : tắt chức năng logger.info
             error: false, // false : Hiển thị
