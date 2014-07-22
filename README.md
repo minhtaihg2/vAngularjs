@@ -38,7 +38,7 @@ angular.module('yourApp', [
 ])
 ```
 
-#Using vFramework
+##Using vFramework
 
 
  ```html
@@ -57,9 +57,9 @@ angular.module('yourApp', [
  loginTableName: {String} // table name login users
  
   ```
-  ==========
+==========
 
-#Cấu hình roles :
+##Cấu hình roles :
  
  
 ###Xây dựng danh sách tất các các Roles bạn sử dụng trong App :
