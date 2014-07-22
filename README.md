@@ -102,4 +102,67 @@ angular.module('yourApp', [
                 accessLevel: window.userCan.accessUser // Quyền User sẽ được truy cập
             })
  ```
+ 
+### Using Service
+
+         *@param {String} TableName tên bảng cần lấy dữ liệu
+         *@param {number} Start Lấy phần tử từ vị trí || để null mặc định 0
+         *@param {number} Limit tối đa phần tử được lấy || để null mặc định 1000
+         *@param {Array}  Filters Lọc theo điều kiện || null
+         *@param {Array}  Sorters Sắp xếp || null
+         @example
+          ```
+          var sorters = [{property: 'startAt', direction: 'DESC'}];`
+          ```
+        
+         ```javascript
+         $fetchData.getData('users', null, null, null, null).then(function (resp) {
+                console.log('data Users : '), resp.all();
+
+             }, function (err) {
+                console.log('err : ', err);
+         })
+         ```
+     
+         ```javascript
+         var filters = [
+         {
+             property: 'driver', // thuộc tính Driver
+             value: userId, // lọc lấy theo ID
+             type: 'string',
+             comparison: 'eq' // so sánh bằng...
+         }
+         ];
+
+         var sorters = [
+         {
+             property: 'startAt', // sắp xếp theo ngày bắt đầu - đây là 1 kiểu thời gian
+             direction: 'DESC' // kiểu sắp xếp
+         }
+         ];
+
+         $fetchData.getData('RouteHistories', null, null, filters, sorters).then(function (resp) {
+                console.log('RouteHistories', $scope.RouteHistories);
+            }, function (err) {
+                console.log('err : ', err);
+            })
+         ```
+         
+
+
+
+#####Lấy dữ liệu từ service
+         
+         *@param {String} TableName tên bảng cần lấy dữ liệu
+         *@param {String} Id của đối tượng cần lấy
+         *@param {String} NameStogare dataStorage truyền vào || null (để null sẽ lấy từ server)
+         @example
+         ```
+         $fetchData.getDataId('UserAuths', '5397ca5dc0c8174642000001').then(function(resp){
+                console.log('data : ',resp);
+                },function(err){
+                console.log('err :',err);
+         });
+         ```
+         
 
