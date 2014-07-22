@@ -49,10 +49,10 @@ framework for AngularJS Client VSOFT
  registerRouterServer: {String},// server node.js route /register
  loginTableName: {String} // table name login users
   ```
- #Cấu hình roles :
+ # Cấu hình roles :
  
  
- ###Xây dựng danh sách tất các các Roles bạn sử dụng trong App :
+ ### Xây dựng danh sách tất các các Roles bạn sử dụng trong App :
  
   ```html
  roles: [
@@ -62,7 +62,7 @@ framework for AngularJS Client VSOFT
   ```
  
  
-###Thiết lập tất cả các quyền truy cập mà bạn định ngĩa theo từng cấp độ sử dụng :
+### Thiết lập tất cả các quyền truy cập mà bạn định ngĩa theo từng cấp độ sử dụng :
  
   ```html
  accessLevels: {
@@ -70,7 +70,7 @@ framework for AngularJS Client VSOFT
       'user': ['user']
  }
   ```
-  ###Export roles :
+  ### Export roles :
   ```
  exports.userCan =
  {
@@ -81,7 +81,7 @@ framework for AngularJS Client VSOFT
 ```
  accessLevel: window.userCan.accessUser
 ```
- ####Ví dụ :
+ #### Ví dụ :
  ```html
  .state('main.home', {
                 url: "",
