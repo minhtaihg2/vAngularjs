@@ -6,9 +6,9 @@ framework for AngularJS Client VSOFT
 
 ==========
 
-Get Started
+##Get Started
 
-==========
+
 
 (1) Get vFramework in one of 4 ways:
 
@@ -21,7 +21,7 @@ Get Started
 
 (4) Add 'vFramework' to your main module's list of dependencies 
 
-When you're done, your setup should look similar to the following:
+####When you're done, your setup should look similar to the following:
 
 ==========
 
