@@ -105,13 +105,13 @@ angular.module('yourApp', [
  
 ### Using Service
 
-Param         |        values | description
+Param         |        Types | description
 ------------- | ------------- | ----------
-String  | TableName     | Tên bảng dữ liệu cần lấy
-number  | Start         | Start Lấy phần tử từ vị trí || để null mặc định 0
-number  | Limit         | tối đa phần tử được lấy || để null mặc định 1000
-Array   | Filters       | Lọc theo điều kiện || null
-Array   | Sorters       | Sắp xếp || null
+TableName   |  String   | Tên bảng dữ liệu cần lấy
+rStart  |      Numbe    | Start Lấy phần tử từ vị trí || để null mặc định 0
+ Limit |       Number   | Tối đa phần tử được lấy || để null mặc định 1000
+ Filters   |    Array   | Lọc theo điều kiện || null
+ Sorters  |    Array    | Sắp xếp || null
 
 
 * @param {String} TableName tên bảng cần lấy dữ liệu
