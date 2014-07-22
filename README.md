@@ -113,16 +113,6 @@ rStart  |      Numbe    | Start Lấy phần tử từ vị trí || để null m
  Filters   |    Array   | Lọc theo điều kiện || null
  Sorters  |    Array    | Sắp xếp || null
 
-
-* @param {String} TableName tên bảng cần lấy dữ liệu
-
-* @param {number} Start Lấy phần tử từ vị trí || để null mặc định 0
-
-* @param {number} Limit tối đa phần tử được lấy || để null mặc định 1000
-
-* @param {Array}  Filters Lọc theo điều kiện || null
-
-* @param {Array}  Sorters Sắp xếp || null
          
 
 #####example
@@ -168,13 +158,15 @@ rStart  |      Numbe    | Start Lấy phần tử từ vị trí || để null m
          
 
 #####Lấy dữ liệu từ service
-         
-* @param {String} TableName tên bảng cần lấy dữ liệu
 
-* @param {String} Id của đối tượng cần lấy
 
-* @param {String} NameStogare dataStorage truyền vào || null (để null sẽ lấy từ server)
-         
+Param         |        Types | description
+------------- | ------------- | ----------
+TableName   |  String   | Tên bảng cần lấy dữ liệu
+Id  |      String    | Id của đối tượng cần lấy
+ NameStorage |       String   | NameStorage dataStorage truyền vào || null (để null sẽ lấy từ server)
+
+
          
          ```javascript
          $fetchData.getDataId('UserAuths', '5397ca5dc0c8174642000001').then(function(resp){
