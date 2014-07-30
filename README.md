@@ -80,12 +80,15 @@ Tags label you can add attrs "validated" when you validate input (in input add a
 ```
 
 
-### currency VND
+## Currency VND
 
 ```html
-{{data.price | currencyVND : "" }} VNĐ
+Giá : {{data.price | currencyVND : "" }} VNĐ
 ```
 
+```html
+    Giá : 100,000 VNĐ
+```
 
 ##Cấu hình roles :
  
