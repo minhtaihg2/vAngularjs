@@ -12,8 +12,73 @@ angular.module('vFramework', [
     'vClientApp.baseModel',
     'vClientApp.fetchData',
     'vClientApp.socket',
-    'vClientApp.auth'
+    'vClientApp.auth',
+    'vClientApp.ui-client'
 ]);
+
+
+angular.module('vClientApp.ui-client',[])
+    .directive('onValidSubmit', ['$parse', '$timeout', function($parse, $timeout) {
+        return {
+            require: '^form',
+            restrict: 'A',
+            link: function(scope, element, attrs, form) {
+                form.$submitted = false;
+                var fn = $parse(attrs.onValidSubmit);
+                element.on('submit', function(event) {
+                    scope.$apply(function() {
+                        element.addClass('ng-submitted');
+                        form.$submitted = true;
+                        if (form.$valid) {
+                            if (typeof fn === 'function') {
+                                fn(scope, {$event: event});
+                            }
+                        }
+                    });
+                });
+            }
+        }
+
+    }])
+    .directive('validated', ['$parse', function($parse) {
+        return {
+            restrict: 'AEC',
+            require: '^form',
+            link: function(scope, element, attrs, form) {
+                var inputs = element.find("*");
+                for(var i = 0; i < inputs.length; i++) {
+                    (function(input){
+                        var attributes = input.attributes;
+                        if (attributes.getNamedItem('ng-model') != void 0 && attributes.getNamedItem('name') != void 0) {
+                            var field = form[attributes.name.value];
+                            if (field != void 0) {
+                                scope.$watch(function() {
+                                    return form.$submitted + "_" + field.$valid;
+                                }, function() {
+                                    if (form.$submitted != true) return;
+                                    var inp = angular.element(input);
+                                    if (inp.hasClass('ng-invalid')) {
+                                        element.removeClass('has-success');
+                                        element.addClass('has-error');
+                                    } else {
+                                        element.removeClass('has-error').addClass('has-success');
+                                    }
+                                });
+                            }
+                        }
+                    })(inputs[i]);
+                }
+            }
+        }
+    }])
+    .filter('currencyVND', [ '$filter', '$locale', function ($filter, $locale) {
+        var currency = $filter('currency'), formats = $locale.NUMBER_FORMATS;
+        return function (amount, symbol) {
+            var value = currency(amount, symbol);
+            return value.replace(new RegExp('\\' + formats.DECIMAL_SEP + '\\d{2}'), '')
+        }
+    }]);
+
 
 angular.module('vClientApp.auth', ['vClientApp.logger', 'vClientApp.restful', 'vClientApp.fetchData', 'vClientApp.config'])
     .factory('$auth', ['$resource', '$http', '$cookieStore', '$rootScope', 'localStorageService', '$logger', '$q', 'appConfig', '$fetchData', '$restful',
