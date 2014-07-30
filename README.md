@@ -59,6 +59,27 @@ angular.module('yourApp', [
   ```
 ==========
 
+##Directive validate form with ionic
+
+you add attrsbute "novalidate="novalidate" remove validate html5 and add attr "on-valid-submit" when action button submit
+```html
+ <form novalidate="novalidate" on-valid-submit="login(user)">
+    
+ </form>
+```
+
+tags label you can add attrs "validated" when you validate input (in input add attr required="required")
+
+```html
+  <label class="item item-input validated">
+                        <span class="input-label">Email</span>
+                        <input type="email" ng-model="user.email" required="required" name="email">
+                        <i class="icon ion-alert-circled error"></i>
+                    </label>
+
+```
+
+
 ##Cấu hình roles :
  
  
