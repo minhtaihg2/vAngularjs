@@ -90,6 +90,19 @@ Giá : {{data.price | currencyVND : "" }} VNĐ
     Giá : 100,000 VNĐ
 ```
 
+###Check internet 
+
+```javascript
+isMobile.isAndroid();
+isMobile.getUserAgent(); //web
+isMobile.isIOS();
+isMobile.isBlackBerry();
+isMobile.isWindowsMobile();
+isMobile.isWindowsDesktop();
+isMobile.isAny();
+```
+
+
 ##Cấu hình roles :
  
  
