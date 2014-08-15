@@ -147,7 +147,7 @@ isMobile.isAny();
             })
  ```
  
-### Using Service
+### Using Service get Data
 
 Param         |        Types | description
 ------------- | ------------- | ----------
